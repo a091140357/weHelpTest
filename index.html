@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale= 1.0"/>
+        <meta charset = "utf-8">
+        <title>自我介紹</title>
+        <style>
+        /*把預設的去掉*/
+        *{
+            padding:0px;
+            margin:0px;
+        }
+        .frame{
+            display:flex;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            background-color: rgb(52, 113, 107);
+        }
+        .left{
+            display:flex;
+            align-items:center;
+            flex:none;
+            color: rgb(221, 221, 221);
+            padding-left: 10px;
+        }
+        .left_text{
+            font-size:35px;
+            transition: transform 0.2s ease;
+        }
+        .left_text:hover{
+            cursor: pointer;
+            transform: scale(1.15);
+            color: azure;
+        }
+        .right{
+            display:flex;
+            flex:auto;
+            justify-content:flex-end;
+            color: rgb(222, 222, 222);
+        }
+        .item{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align: center;
+            font-size: 18px;
+            /* border-radius:30px; */
+            /* border: 3px solid #000; */
+            height: 50px;
+            width: 100px;
+            margin: 5px;
+            /* box-shadow:rgba(143, 143, 143, 0.4) 5px 5px 10px; */
+            transition: transform 0.2s ease;
+            letter-spacing:3px;
+        }
+        .item:hover{
+            cursor: pointer;
+            transform: scale(1.55);
+            color: azure;
+
+        }
+        .item2{
+            background-color: rgb(201, 226, 219);
+            display:flex;
+            text-align: center;
+            justify-content:center;
+            align-items:center;
+            border-radius:10px;
+            height: 80px;
+            margin-top: 25px;
+            margin-left:150px;
+            margin-right:150px;
+            margin-bottom:60px;
+            font-size:18px;
+        }
+        .text{
+            align-items:center;
+            text-align: left;
+            font-size:20px;
+            letter-spacing: 2px;
+            line-height: 40px;
+        }
+        .text_ambit{
+            width:800;
+            margin:50px auto;
+            padding-left:280px;
+            padding-right:280px;
+        }
+        .article_title{
+            font-size: 25px; 
+            margin-bottom: 10px;
+            color: rgb(16, 60, 105);
+            font-weight: bold;
+        }
+        .inline-figure{
+            display:table;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .inline-figure img{
+            max-width: 400px;
+            height: 200px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class = "frame">
+            <div class = "left">
+                <div id = "Title1" class = "left_text" onclick="changeTo('Title1')">第8屆WeHelp訓練營申請</div>
+            </div>
+                <div class = "right">
+                    <div id = "Q1" class = "item" onclick="changeTo(1)">問題1</div>
+                    <div id = "Q2" class = "item" onclick="changeTo(2)">問題2</div>
+                    <div id = "Q3" class = "item" onclick="changeTo(3)">問題3</div>
+                    <div id = "Q4" class = "item" onclick="changeTo(4)">問題4</div>
+                    <div id = "Q5" class = "item" onclick="changeTo(5)">問題5</div>
+                    <div id = "Q6" class = "item" onclick="changeTo(6)">問題6</div>
+                    <div id = "Q7" class = "item" onclick="changeTo(7)">問題7</div>
+                    <div id = "Q8" class = "item" onclick="changeTo(8)">問題8</div>
+                </div>
+        </div>
+        <hr/>
+        <div id = "q1" style="display: none" class = "item2">個人簡介和申請動機。</div>
+        <div id = "q2" style="display: none" class = "item2">曾經做過哪些軟體工程技術相關的學習？若有作品請分享給我們。</div>
+        <div id = "q3" style="display: none" class = "item2">如果參與這個訓練，會怎麼安排學習時間？</div>
+        <div id = "q4" style="display: none" class = "item2">請簡述對於軟體工程的領域偏好和職涯想像。</div>
+        <div id = "q5" style="display: none" class = "item2">請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</div>
+        <div id = "q6" style="display: none" class = "item2">關於這份申請網頁，分享一個開發時的技術心得。</div>
+        <div id = "q7" style="display: none" class = "item2">如何看待人工智慧的發展對軟體工程師的影響？</div>
+        <div id = "q8" style="display: none" class = "item2">其他想要對我們說的事情？</div>
+        <div>
+            <div id = "title1" class = "text_ambit" style= "display:block;">
+                <div class = "text" style = "text-align:center;font-size: 30px;">
+                    請點擊問題～
+                </div>
+            </div>
+            <div id = "a1" class = "text_ambit" style="display: none">
+                <div class = "article_title">《個人簡介》</div>
+                <div class = "text">
+                我是陳柏宏。目前23歲，剛畢業沒多久。我目前於科技公司擔任 AI 多媒體設計師，主要負責評估並導入合適的 AI 工具以解決專案需求、處理視覺設計，並針對不同專案的複雜需求，搭建專屬的 ComfyUI 工作流。</br>
+                因為不是相關科系，我的技術知識幾乎都是從實作中『邊做邊學』累積來的。面對 AI 領域快速的變化，我已經很習慣這種節奏，也培養出很強的適應力。
+                </div>
+                <div class = "article_title" style="margin-top: 35px; margin-bottom:10px;">《申請動機》</div>
+                <div class = "text">
+                    1. <span style="color: rgb(154, 46, 46);">從 AI 生成走向後端與自動化</span> 一開始我只是應用 AI 工具，但隨著專案變大，我開始需要做系統整合。這催使我去碰很多後端基礎，例如 API 怎麼串、Webhook 怎麼接，我也實際用 FastAPI 寫過後端端點、用 Docker 處理過環境設定。原本只是想解決眼前的問題，沒想到在這不斷『補洞』的過程中，我發現自己其實還滿喜歡寫程式。</br></br>
+                    2. <span style="color:rgb(154, 46, 46);">想擺脫只靠 AI 產 Code，把基本功練紮實</span> 我個人非常喜歡把工作『自動化』和『簡化』，但因為缺乏基礎，常常覺得心有餘而力不足，很多想法推不動，也知道自己肯定錯過了很多標準的工程做法。目前我多半只能依賴 AI 輔助（Vibe Coding）來解決眼前的需求，但我很清楚，依賴 AI 跟自己真懂是兩回事。每次看著生成出來的程式碼，我有著強烈的渴望，想去把它拆解開來、徹底搞定底層邏輯，也很想知道到底該怎麼把系統穩定地部署上雲端。</br></br>
+                    3. <span style="color:rgb(154, 46, 46);">為什麼想報名</span> 我很清楚，如果想從一個『只會拼湊程式碼的設計師』，真正轉職為專業的工程師，光靠目前這樣碎片化的自學是絕對不夠的。我需要有系統的訓練來打好地基，這也是我特別想申請這堂課的原因。我希望能透過完整的學習，將我對解決問題的敏銳度，轉化為真正的開發實力，未來能獨立寫出穩定、好維護的系統與服務</br></br>
+                </div>
+            </div>
+            <div id = "a2" class = "text_ambit" style="display: none">
+                <div class = "text" style="margin-top: 35px; margin-bottom:10px;">在過去的專案經驗中，我主要透過「解決實際業務需求」來自主學習程式碼與系統架構，以下是幾個具體經驗：</div></br>
+                <div class = "text">
+                    1.<span style="color: rgb(154, 46, 46);">雲端工作流與前後端串接</span> 一開始我在架 ComfyUI 工作流時，發現公司電腦的硬體根本撐不住 AI 生成的硬體需求。為了克服這點，我改用 RunningHub 把環境搬到雲端。後來為了做到流程自動化，我嘗試用 FastAPI 寫後端程式去接RunningHub的API，並搭配我自己用 AI 生成出來的前端介面，讓整個生成任務可以順利透過 API 被呼叫跟執行。</br></br>
+                        <div style = "display:flex">
+                            <figure class="inline-figure">
+                                <img src="file/comfyui工作流.png" alt="comfyui工作流圖片">
+                                <figcaption><a href="file/comfyui工作流.png" target="_blank">搭建 ComfyUI 工作流的側拍</a></figcaption>
+                            </figure>
+                            <figure class="inline-figure">
+                                <img src="file/虛擬人生成.png" alt="串接runninghub的工具圖片">
+                                <figcaption><a href="file/虛擬人生成.png" target="_blank">串接runninghub的工具</a></figcaption>
+                            </figure>
+                        </div>
+                    2. <span style="color: rgb(154, 46, 46);">解決痛點的內網小工具開發</span> 我滿喜歡開發工具來解決公司內部的痛點。例如，為解決外語影片聽不懂在講哪邊導致難以上字幕的問題，我開發了一個基於 Whisper 的語音辨識工具。這個工具不僅能辨識語言，還會精準抓取時間戳並使用大語言模型自動轉成 .srt 格式，讓同事能直接匯入 Premiere 剪輯。 這些經驗讓我初步認識了前後端分離的架構，也學會了基本的本地端環境架設。</br></br>
+                        <div style = "display:flex">
+                            <figure class="inline-figure">
+                                <img src="file/語音辨識.png" alt="語音辨識工具圖片">
+                                <figcaption><a href="file/語音辨識.png" target="_blank">語音辨識工具</a></figcaption>
+                        </div>
+                    3. <span style="color: rgb(154, 46, 46);">因應公司需求，硬幹對外 API 的挫折經驗</span> 有次因為公司專案的需求，必須開一支 API 讓客戶對接服務。當時我硬著頭皮接下任務，靠自己摸索硬幹了一支對外的 API 出來。雖然最後功能有拼湊出來，客戶也真的使用了，但後續維護起來卻非常吃力。因為我當時其實不太懂後端的標準規範，連怎麼正確處理 200、400 這些 Response 狀態碼都不知道，也寫不出清楚的 API 文件。這件事讓我深刻體會到，光會『把東西生出來』是不夠的，不照著標準的工程師做法，後續的維護會是一場災難。<a href="file/API 文件_v1_20251218.pdf" target="_blank"><span style="font-weight: bold;">點這裡查看API文件(PDF)</span></a></br></br>
+                    <span class = "article_title">《總結與反思》</span></br>老實說，在上述的開發過程中，我大量依賴了 AI 輔助開發（Vibe Coding）。當遇到 AI 也解不了的 Bug 時，我只能不斷去請教公司的其他工程師。在看他們排解問題、設計架構的過程中，我才驚覺自己雖然能把東西「兜」出來，但對於底層邏輯、資料結構和標準的工程師做法卻一無所知。這讓我深刻體會到自己的不足，也是我決定打掉重練、報名這次課程把基本功徹底練紮實的最大原因。
+                </div>
+            </div>
+            <div id = "a3" class = "text_ambit" style="display: none">
+                <div class = "text">
+                為了這次的轉職，我已經下定決心要全職投入學習，並為自己規劃了規律的作息：</br></br>
+                <span class = "article_title" style = "font-size:23px;">平日（週一至週五）</span>： 每天確保 10 小時的專注時間，時段固定安排為早上 9-12 點、下午 1-6 點，以及晚上 8-10 點。</br>
+                <span class = "article_title" style = "font-size:23px;">假日白天</span>： 上午與下午會轉換環境，前往圖書館或咖啡廳持續讀書。</br>
+                <span class = "article_title" style = "font-size:23px;">假日晚上</span>： 安排一天晚上去健身房運動保持體力，另一天晚上則看電影放鬆身心。希望透過這樣規律、有讀書也有放鬆的節奏，可以讓我順利度過接下來高強度的培訓期。
+                </div>
+            </div>
+            <div id = "a4" class = "text_ambit" style="display: none">
+                <div class = "text">
+                關於職涯想像，我對於網站功能開發與 API 串接特別有興趣。我希望未來的工作內容，可以讓我透過後端程式去串接各種不同的第三方服務和 API，把不同的資源整合在一起，去實現各種複雜且實用的網站功能。成為一個能獨立產出穩定系統的開發者，是我最大的目標。
+                </div>
+            </div>
+            <div id = "a5" class = "text_ambit" style="display: none">
+                <div class = "text">
+                    以前做 3D 建模時，常需要長時間坐在電腦前。有時會因為電腦太破而完全卡死，導致進度流失，這往往會讓我產生很多負面情緒。</br>
+                    為了處理這些情緒，我會讓自己立刻抽離當下的情境。我通常會戴起耳機聽音樂出門走走，或是去健身房運動流汗。雖然偶爾也會透過煮飯或烤蛋糕來紓壓，但考量時間成本，現在主要以聽音樂散步為主。這段獨處的時間能幫我快速平復心情，冷靜過後再回去處理問題。
+
+                </div>
+            </div>
+            <div id = "a6" class = "text_ambit" style="display: none">
+                <div class = "text">
+                    關於這次的網頁開發，其實算是我跨出舒適圈的一個嘗試。我原本只比較熟悉後端，為了自己把畫面刻出來，我去把彭彭老師的前端基礎課看完。雖然前端的邏輯跟後端不太一樣、還需要時間適應，但也讓我發現了操作畫面的樂趣。</br>
+                    其中我覺得挺有趣的一段實作，是首頁的<span style = "color:rgb(16, 60, 105)"">『點擊切換』</span>功能。當使用者點擊問題時，會觸發 onclick 把對應的值傳入函式。我在函式裡跑了一個 for 迴圈去遍歷所有元素的 ID，並直接在裡面用條件判斷：只要編號符合點擊的值，就打開該區塊的 display 屬性，其他的則全部隱藏。看著自己剛學完 JS 就能把這套切換邏輯順利寫出來，真的覺得挺有趣的。
+                </div>
+            </div>
+            <div id = "a7" class = "text_ambit" style="display: none">
+                <div class = "text">
+                    我覺得 AI 肯定會改變寫程式的生態，雖然不會全部取代，但重複性的工作絕對會被取代掉。因為我每天都在接觸 AI 應用，所以更覺得自己要趕快往前走。</br>
+                    像我看我們公司的工程師，現在也都習慣讓 AI 先寫，自己再接著改。這樣做速度很快，但關鍵是，他們對程式夠熟，很快就能看出哪裡有bug、該怎麼調整。這就是為什麼我現在這麼想把基礎打好，因為我知道，如果我自己不會除錯跟修改，那永遠只能被工具帶著走；只有自己夠強，才能真正利用 AI 來提升效率。
+                </div>
+            </div>
+            <div id = "a8" class = "text_ambit" style="display: none">
+                <div class = "text">
+                    其實這陣子一路摸索下來，我慢慢確定了自己對寫程式的興趣。雖然我寫的東西還很陽春，但看著程式碼變成能實際派上用場的工具，真的讓我很有成就感。所以這次選擇全職轉職，我是認真想把軟體開發當作未來的職涯目標。我知道自己還有很大一段路要走，也還有很多東西要重新學起，希望能有這個機會在這邊好好磨練自己，踏出成為工程師的第一步。
+                </div>
+            </div>
+        </div>
+        <script>
+            function changeTo(number){
+                if(number === 'Title1'){
+                    let Title1Div = document.querySelector("#title1");
+                    Title1Div.style.display = "block"
+                    for(let i = 1; i <= 8; i++){
+                        let qDiv = document.querySelector("#q"+ i);
+                        let aDiv = document.querySelector("#a" + i);
+                        let QDiv = document.querySelector("#Q" + i);
+
+                        if(i === number){
+                        qDiv.style.display = "flex";
+                        aDiv.style.display = "block";
+                        QDiv.style.textDecoration = "underline white 2px";
+                        QDiv.style.fontSize = "28px"
+                        QDiv.style.color = "azure";
+                        }
+                        else{
+                            qDiv.style.display = "none";
+                            aDiv.style.display = "none";
+                            QDiv.style.textDecoration = "none";
+                            QDiv.style.color = "rgb(201, 226, 219)";
+                            QDiv.style.fontSize = "18px"
+                        }
+                        }
+                    }
+                else{
+                    let Title1Div = document.querySelector("#title1");
+                    Title1Div.style.display = "none";
+                    for(let i = 1; i <= 8; i++){
+                        let qDiv = document.querySelector("#q"+ i);
+                        let aDiv = document.querySelector("#a" + i);
+                        let QDiv = document.querySelector("#Q" + i);
+
+                        if(i === number){
+                        qDiv.style.display = "flex";
+                        aDiv.style.display = "block";
+                        QDiv.style.textDecoration = "underline white 2px";
+                        QDiv.style.fontSize = "28px"
+                        QDiv.style.color = "azure";
+                        }
+                        else{
+                            qDiv.style.display = "none";
+                            aDiv.style.display = "none";
+                            QDiv.style.textDecoration = "none";
+                            QDiv.style.color = "rgb(201, 226, 219)";
+                            QDiv.style.fontSize = "18px"
+                        }
+                    }
+                }
+             
+            }
+        </script>
+    </body>
+</html>
